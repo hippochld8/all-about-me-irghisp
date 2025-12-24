@@ -460,8 +460,7 @@
                 </article>
                 `
             },
-            
-            // BAGIAN 6-12 YANG TIDAK BOLEH HILANG 
+             
             { id: 'my-concepts', title: '6. My Concepts', content: placeholder('My Concepts') },
             { id: 'my-opinions', title: '7. My Opinions', content: placeholder('My Opinions') },
             { id: 'my-innovations', title: '8. My Innovations', content: placeholder('My Innovations') },
@@ -504,5 +503,9 @@
         window.addEventListener('hashchange', () => setActive(location.hash.slice(1)));
         renderToc();
     </script>
+    <link rel="stylesheet" href="assets/cursor.css">
+    <link rel="stylesheet" href="assets/galaxy.css">
+    <script src="assets/cursor.js" defer></script>
+    <script src="assets/galaxy.js" defer></script>
 </body>
 </html>

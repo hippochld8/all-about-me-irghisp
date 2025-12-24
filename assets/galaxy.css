@@ -1,0 +1,22 @@
+/* Galaxy canvas layer: moving stars and soft drifting blobs */
+#galaxy-canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1; /* sits above base background but below content */
+  mix-blend-mode: screen;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #galaxy-canvas { display: none; }
+}
+
+/* Optional helper if you need a subtle overlay for blobs */
+.galaxy-blob {
+  position: absolute;
+  pointer-events: none;
+  filter: blur(40px) saturate(120%);
+}
