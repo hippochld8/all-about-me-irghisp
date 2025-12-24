@@ -3,17 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio Asesmen II-2100 — Galaxy Irghi</title>
+    <title>Portfolio Asesmen II-2100 — Galaxy Edition</title>
     <style>
         :root {
-            /* Galaxy Palette */
+            /* Palette Galaxy Neon */
             --bg: #030508;
-            --panel: rgba(255, 255, 255, 0.05); /* Glass Effect */
+            --panel: rgba(255, 255, 255, 0.04); 
             --ink: #edeff2;
             --muted: #94a3b8;
             --brand: #bc13fe; /* Neon Purple */
             --accent: #7a04eb; /* Deep Violet */
-            --glow: rgba(188, 19, 254, 0.4);
+            --glow: rgba(188, 19, 254, 0.5);
             --line: rgba(255, 255, 255, 0.1);
             --ease: cubic-bezier(.22,.61,.36,1);
             --profile-image: url('assets/foto\ profil.jpg');
@@ -22,144 +22,102 @@
         * { box-sizing: border-box; }
 
         html, body {
-            height: 100%;
-            margin: 0;
+            height: 100%; margin: 0;
             font-family: 'Inter', system-ui, sans-serif;
-            background: var(--bg);
-            color: var(--ink);
+            background: var(--bg); color: var(--ink);
             overflow-x: hidden;
         }
 
-        /* ========== GALAXY BACKGROUND ========== */
+        /* ANIMATED GALAXY BACKGROUND */
         .stars-container {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             z-index: -2;
             background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
         }
-
         .stars-container::after {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 2px; height: 2px;
-            background: white;
-            box-shadow: 
-                24vw 10vh 1px white, 80vw 50vh 2px white, 40vw 30vh 1.5px white, 
-                10vw 80vh 1px white, 90vw 20vh 2px white, 55vw 60vh 1px white,
-                15vw 40vh 1.2px white, 70vw 90vh 2px white, 30vw 15vh 1px white;
-            border-radius: 50%;
-            opacity: 0.5;
-            animation: twinkle 5s infinite alternate;
+            content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 2px;
+            background: white; border-radius: 50%;
+            box-shadow: 24vw 10vh 1px white, 80vw 50vh 2px white, 40vw 30vh 1.5px white, 
+                        10vw 80vh 1px white, 90vw 20vh 2px white, 55vw 60vh 1px white,
+                        30vw 40vh 1px #bc13fe, 70vw 70vh 1px #7a04eb;
+            opacity: 0.5; animation: twinkle 5s infinite alternate;
         }
-
-        .blobs { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; filter: blur(80px); }
-        .blob { position: absolute; border-radius: 50%; opacity: 0.3; animation: float 20s infinite ease-in-out; }
-        .blob-1 { width: 400px; height: 400px; background: var(--brand); top: -10%; left: -10%; }
-        .blob-2 { width: 350px; height: 350px; background: var(--accent); bottom: 10%; right: -5%; animation-delay: -5s; }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(50px, 40px) scale(1.1); }
-            66% { transform: translate(-30px, 60px) scale(0.9); }
-        }
-
         @keyframes twinkle { from { opacity: 0.3; } to { opacity: 0.8; } }
 
-        /* ========== LAYOUT & COMPONENTS ========== */
         .wrap { display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; }
 
         aside {
-            background: rgba(10, 12, 16, 0.75);
-            backdrop-filter: blur(20px);
-            border-right: 1px solid var(--line);
-            padding: 25px 20px;
-            position: sticky;
-            top: 0; height: 100vh;
-            overflow-y: auto;
+            background: rgba(10, 12, 16, 0.8); backdrop-filter: blur(25px);
+            border-right: 1px solid var(--line); padding: 25px 20px;
+            position: sticky; top: 0; height: 100vh; overflow-y: auto;
         }
 
         .brand {
-            font-weight: 800;
-            font-size: 20px;
-            margin-bottom: 24px;
-            color: #fff;
-            text-shadow: 0 0 10px var(--brand);
-            letter-spacing: 0.5px;
+            font-weight: 800; font-size: 20px; margin-bottom: 24px; color: #fff;
+            text-shadow: 0 0 15px var(--brand); letter-spacing: 1px;
         }
 
         .search input {
-            width: 100%; padding: 12px;
-            border: 1px solid var(--line);
-            border-radius: 12px;
-            background: rgba(255,255,255,0.05);
-            color: #fff;
-            transition: all 0.3s var(--ease);
+            width: 100%; padding: 12px; border: 1px solid var(--line);
+            border-radius: 12px; background: rgba(255,255,255,0.05);
+            color: #fff; transition: all 0.3s var(--ease);
         }
-
         .search input:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 15px var(--glow); }
 
         .toc { list-style: none; padding: 0; margin-top: 25px; }
         .toc a {
-            display: block; padding: 12px 15px; margin-bottom: 6px;
-            border-radius: 10px; color: var(--muted); text-decoration: none;
-            transition: all 0.3s var(--ease);
+            display: block; padding: 12px 15px; margin-bottom: 6px; border-radius: 10px;
+            color: var(--muted); text-decoration: none; transition: all 0.3s var(--ease);
         }
-
         .toc a:hover { background: rgba(188, 19, 254, 0.1); color: #fff; transform: translateX(5px); }
         .toc a.active { background: var(--brand); color: #fff; font-weight: 600; box-shadow: 0 0 20px var(--glow); }
 
         main { padding: 40px 50px; display: flex; flex-direction: column; align-items: center; }
 
-        .meta {
-            display: flex; justify-content: space-between; max-width: 800px; width: 100%;
-            margin-bottom: 25px; padding: 18px 25px;
-            background: var(--panel); backdrop-filter: blur(10px);
-            border-radius: 15px; border: 1px solid var(--line);
-            font-size: 14px;
-        }
+        /* CONTENT STYLING */
+        article { width: 100%; max-width: 800px; animation: fadeIn 0.6s var(--ease); }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
-        .meta b { color: #fff; font-size: 15px; }
+        .meta { 
+            display: flex; justify-content: space-between; background: var(--panel); 
+            padding: 15px 20px; border-radius: 12px; border: 1px solid var(--line); margin-bottom: 30px;
+            font-size: 14px; color: var(--muted);
+        }
+        .meta b { color: #fff; font-size: 16px; }
 
         .hero {
             display: flex; align-items: center; gap: 30px;
             background: var(--panel); backdrop-filter: blur(15px);
             padding: 40px; border-radius: 24px; border: 1px solid var(--line);
             box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-            transition: all 0.4s var(--ease);
-            width: 100%; max-width: 800px;
         }
-
-        .hero:hover { transform: translateY(-5px); border-color: var(--brand); }
         .hero h2 { margin: 0 0 10px; font-size: 30px; color: #fff; text-shadow: 0 0 15px var(--glow); }
         .hero .img {
             width: 180px; height: 180px; flex-shrink: 0;
             background: var(--profile-image) center/cover no-repeat;
-            border-radius: 50%; border: 3px solid var(--brand);
-            box-shadow: 0 0 20px var(--brand);
+            border-radius: 50%; border: 3px solid var(--brand); box-shadow: 0 0 20px var(--brand);
         }
 
-        /* TABLES & CONTENT */
         .shape-table {
-            width: 100%; border-collapse: separate;
-            background: var(--panel); backdrop-filter: blur(10px);
-            border: 1px solid var(--line); border-radius: 15px; overflow: hidden;
+            width: 100%; border-collapse: separate; background: var(--panel);
+            backdrop-filter: blur(10px); border: 1px solid var(--line);
+            border-radius: 15px; overflow: hidden; margin-top: 20px;
         }
-        .shape-table thead th { background: linear-gradient(90deg, var(--accent), var(--brand)); color: #fff; padding: 15px; }
-        .shape-table tbody td, .shape-table tbody th { padding: 15px; border-top: 1px solid var(--line); }
-        .shape-table tbody th { color: var(--brand); }
+        .shape-table thead th { background: linear-gradient(90deg, var(--accent), var(--brand)); color: #fff; padding: 15px; text-align: left; }
+        .shape-table tbody td, .shape-table tbody th { padding: 15px; border-top: 1px solid var(--line); vertical-align: top; }
+        .shape-table tbody th { color: var(--brand); text-align: left; width: 25%; }
 
         .file-card {
             display: flex; align-items: center; gap: 20px;
             background: var(--panel); padding: 20px; border-radius: 15px;
             border: 1px solid var(--line); text-decoration: none; transition: 0.3s;
+            max-width: 500px; margin: 20px auto; color: inherit;
         }
-        .file-card:hover { background: rgba(255,255,255,0.1); border-color: var(--brand); }
-        .file-card .icon { font-size: 32px; filter: drop-shadow(0 0 5px var(--brand)); }
-        .file-card .name { color: #fff; font-weight: 600; margin: 0; }
+        .file-card:hover { border-color: var(--brand); transform: translateY(-3px); background: rgba(255,255,255,0.08); }
         
-        mark { background: var(--brand); color: white; padding: 0 4px; border-radius: 4px; }
-        
+        mark { background: #ffeb3b; color: #000; padding: 0 2px; border-radius: 3px; }
         audio { width: 100%; filter: invert(100%) hue-rotate(180deg) brightness(1.5); margin: 20px 0; }
+        blockquote { font-style: italic; border-left: 4px solid var(--brand); padding: 20px; margin: 30px 0; background: rgba(188,19,254,0.05); border-radius: 0 15px 15px 0; }
 
         @media (max-width: 920px) {
             .wrap { grid-template-columns: 1fr; }
@@ -169,33 +127,31 @@
     </style>
 </head>
 <body>
-
     <div class="stars-container"></div>
-    <div class="blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
-
     <div class="wrap">
         <aside>
             <div class="brand">Irghi Satya Priangga</div>
             <div class="search"><input id="search" type="search" placeholder="Cari kata.."></div>
             <ul id="toc" class="toc"></ul>
         </aside>
-
         <main>
+            <div style="color:var(--muted); font-size: 12px; margin-bottom: 10px;">Portfolio Asesmen II-2100 KIPP</div>
             <h1 id="page-title" style="color: #fff; text-shadow: 0 0 10px var(--glow); margin-bottom: 30px;"></h1>
-            <div id="page-content" style="width: 100%; max-width: 850px;"></div>
+            <div id="page-content"></div>
         </main>
     </div>
 
     <script>
+        function placeholder(title) {
+            return `<article><p style='color:var(--muted); text-align:center; padding: 50px;'>Halaman <b>${title}</b> masih kosong. Silakan isi konten di sini nanti.</p></article>`;
+        }
+
         const PAGES = [
             { 
                 id: 'selamat-berjumpa', 
                 title: 'Perkenalan diri', 
                 content: `<article>
-                    <div class='meta'>
+                    <div class="meta">
                         <div><b>Author</b><br>Irghi Satya Priangga</div>
                         <div><b>Published</b><br>${new Date().toLocaleDateString('id-ID')}</div>
                     </div>
@@ -216,79 +172,300 @@
             {
                 id: 'kisah-identitas',
                 title: '1. All About Me',
-                content: `<article style="line-height:1.8;">
-                    <h2 style="text-align:center; color:var(--brand);">Hello World!</h2>
-                    <p>Perkenalkan, <b>Irghi Satya Priangga</b>, mahasiswa tingkat 2 yang sangat suka dunia informatika. Mengenal informatika sejak masa SMA dan langsung menyukai semua hal didalamnya. Khususnya pada bidang UI/UX.</p>
-                    <p>Aktif di berbagai kegiatan kepanitiaan HMIF dan Dokumentasi BPA STEI-K24. Selain IT, saya sangat menyukai Geografi, menghafal bendera dan keunikan negara di dunia adalah hobi saya sejak kecil.</p>
+                content: `<article style="line-height:1.8; text-align:justify;">
+                    <h2 style="text-align:center;color:var(--brand);">Hello World!</h2>
+                    <p>Perkenalkan, <b>Irghi Satya Priangga</b>, mahasiswa tingkat 2 yang sangat suka dunia informatika[cite: 25, 618]. Mengenal informatika sejak masa SMA dan langsung menyukai semua hal didalamnya. Eksplor hal-hal tentang informatika merupakan hal yang sangat menyenangkan[cite: 26, 619]. Khususnya pada bidang UI/UX. Mendesain aplikasi sangatlah penting menurut saya[cite: 27, 620]. Bukan hanya tentang estetika, tetapi tentang sisi fungional yang memudahkan user untuk memakai suatu aplikasi[cite: 28, 621].</p>
+                    <p>Aktif di berbagai kegiatan kepanitiaan pada bidang dokumentasi dan IT. Suka belajar tentang penyuntingan video dan fotografi[cite: 29, 622]. Saya mengikuti divisi Media Informasi di HMIF dan sebelumnya pernah menjadi Ketua Dokumentasi BPA STEI-K24[cite: 31, 624].</p>
+                    <p>Diluar bidang yang saya jalani sekarang ada hal yang saya sangat suka. Yaitu geografi, khususnya tentang kenegaraan[cite: 33, 626]. Mengahapal nama negara, benderanya, keunikan, sampai bahasanya merupakan hal menyenangkan. Pada saat kelas 1 SD, saya dibelikan buku atlas oleh orang tua yang dimana dibagian belakang ada negara di dunia beserta benderanya [cite: 34-35, 627-628].</p>
                 </article>`
             },
             {
                 id: 'my-songs',
                 title: '2. My Song for You',
-                content: `<article>
-                    <h2 style='color: var(--brand);'>Leave - Irghi</h2>
-                    <audio controls><source src='assets/leave-irghi.mp3' type='audio/mp3'></audio>
-                    <h3 style="color: var(--muted); margin-top: 20px;">Lirik: Leave - Irghi</h3>
-                    <p style="font-style: italic; color: var(--muted);">"The sky is beautiful... But not as beautiful as you..."</p>
-                </article>`
-            },
-            {
-                id: 'my-shapes',
-                title: '4. My Shapes',
-                content: `<article>
-                    <h2 style="text-align:center; color:var(--brand);">MY SHAPE – Piagam Diri</h2>
-                    <div class="shape-wrap" style="margin-top:30px;">
-                        <table class="shape-table">
-                            <thead><tr><th>Komponen</th><th>Deskripsi Reflektif</th></tr></thead>
-                            <tbody>
-                                <tr><th>S - Strengths</th><td>Long-term Memory, Ambisius, Adaptif.</td></tr>
-                                <tr><th>H - Heart</th><td>Membantu sesama melalui teknologi & edukasi.</td></tr>
-                                <tr><th>A - Aptitudes</th><td>UI/UX Design (Figma), Video Editing (Premiere).</td></tr>
-                                <tr><th>P - Personality</th><td>Imajinatif, Terstruktur, Berorientasi pada tujuan.</td></tr>
-                            </tbody>
-                        </table>
+                content: `
+                    <article style="max-width:800px;margin:auto;">
+                        <h2 style='color: var(--accent);'>Leave - Irghi</h2>
+                        <audio controls style='width:100%; margin: 20px 0;'>
+                            <source src='assets/leave-irghi.mp3' type='audio/mp3'>
+                        </audio>
+
+
+                        <h3 style="color: var(--brand); margin-top: 20px;">Lirik: Leave - Irghi</h3>
+
+
+                        <p>
+                            <b>[Verse 1]</b><br>
+                            The sky is beautiful<br>
+                            But not as beautiful as you<br>
+                            The night was fine when you're here with me<br>
+                            But I ruin it all
+                        </p>
+
+
+                        <p>
+                            <b>[Bridge]</b><br>
+                            I know I hurt you many times<br>
+                            I'm sorry for all the things I've done<br>
+                            Maybe in another life you will find the better me
+                        </p>
+
+
+                        <p>
+                            <b>[Chorus]</b><br>
+                            I'll leave you<br>
+                            Although I still love you, I think it is the right way to do<br>
+                            Hoping you will find someone<br>
+                            Who's better than me and make you happy
+                        </p>
+
+
+                        <p>
+                            <b>[Verse 2]</b><br>
+                            Time goes by and nothing changed<br>
+                            I'm still here alone in my bed<br>
+                            Seeing our picture in my phone<br>
+                            I think I miss the moment
+                        </p>
+
+
+                        <p>
+                            <b>[Bridge]</b><br>
+                            I know I hurt you many times<br>
+                            I'm sorry for all the things I've done<br>
+                            Maybe in another life you will find the better me
+                        </p>
+                        <p>
+                            <b>[Chorus]</b><br>
+                            I'll leave you<br>
+                            Although I still love you, I think it is the right way to do<br>
+                            Hoping you will find someone<br>
+                            Who's better than me and make you happy
+                        </p>
+
+
+                        <p>
+                            <b>[Bridge]</b><br>
+                            So thank you for all the things you've done to me<br>
+                            And thank you for making my life happier
+                        </p>
+
+
+                        <p>
+                            <b>[Chorus]</b><br>
+                            I'll leave you now<br>
+                            Hoping you have the better life without me in your heart<br>
+                            Yeah, you are the one<br>
+                            The one in my heart, no one can get you out
+                        </p>
                     </div>
                 </article>`
             },
+            { id: 'my-stories',
+                title: '3. My Stories for You',
+                content: `
+                <article>
+                    <section style="max-width:800px;margin:auto;line-height:1.9">
+                        <h2 style="text-align:center;color:var(--brand);margin-bottom:10px">
+                            Memulai Kembali atau Menyelesaikan dengan Baik?
+                        </h2>
+                        <p style="color:var(--muted);text-align:center;margin-top:0;margin-bottom:24px">
+                            oleh Irghi Satya Priangga
+                        </p>
+
+
+                        <p>Hari-hari berlalu, rasa senang dihatiku tidak pernah pudar. 
+                            Lalu datang suatu masalah yang tidak terpikirkan olehku.Tapi aku sadar, masalah ini datang untuk membuatku dewasa. 
+                            Secara tiba-tiba, aku dipertemukan dengan seorang yang selalu aku kagumi dari dulu.
+                            Memang kita sudah berpisah, tetapi perasaanku tidak pernah berubah. 
+                            Ternyata dia sedang menjalani hubungan dengan orang yang aku kenal, temanku sendiri. 
+                            Aneh rasanya melihat dia bersama temanku. Tapi aku tidak bisa cemburu. 
+                            Lagi pula siapa aku?
+                        </p>
+                        <p>Setelah sekian lama akhirnya aku berinteraksi dengannya. 
+                            Rasanya masih sama, tatapan yang tak pernah berubah dari dulu. 
+                            Dia masih ceria, ramah, dan selalu lemah lebut setiap saat. 
+                            Tetapi aku tidak menginginkan interaksi selanjutnya. 
+                            Aku tidak mau ada ditengah-tengah temanku dan dia ataupun menjadi perantara mereka. 
+                            Setelah itu kucoba menghindar. Tetapi kenyataan berkata lain. 
+                            Temanku selalu mengajakku untuk bertemu dengannya. 
+                            Aku takut yang rasa yang kupendam tidak bisa tertahan lagi karena interaksi intens.
+                        </p>
+                        <p>Sampai dimana temanku mengalami kecelakaan lalu aku menjemput dan menolongnya. 
+                            Lagi dan lagi orang aku kagumi datang, untuk mengobati temanku. 
+                            Temanku tidak bisa membawa kendaraannya, ia menyuruhku untuk mengantarkan orang yang ku kagumi pulang. 
+                            Aneh rasanya, tak karuan. Banyak obrolan yang tercurahkan antara aku dan dia.
+                            </p>
+                        <p>Singkat cerita orang yang ku kagumi berpisah dengan temanku. 
+                            Aku bingung, karena interaksi kami semakin intens. 
+                            Tapi aku malah mempunyai beban moral kepada temanku. 
+                            Sangat tidak etis menurutku untuk mendekati orang aku kagumi, karena sebelumnya ia dengan temanku. 
+                            Aku sangat menikmati kedekatan kita. Tapi aku pesimis, rasanya dia tidak mungkin menyukai lagi. 
+                            Masalah ini memberikanku banyak pelajaran. 
+                            Karena masalah ini aku selalu berpikir lebih panjang kedepan, memikirkan segala kemungkinan yang terjadi, risiko yang didapat ataupun keuntungan yang didapat. 
+                            Dan secara tidak langsung aku terbiasa untuk melakukan hal-hal tersebut dikehidupan sehari-hari.
+                        </p>
+                        <p><strong>Lantas apa yang harus aku lakukan? Apakah lebih bijaksana untuk memulai kembali dengan versi terbaikku atau malah harus menyelesaikan dengan baik karena kenangan perpisahan kita dulu yang tak pernah hilang dari kepalaku?</strong></p>
+                    </section>
+                </article>`
+            },
+
+            { id: 'my-shapes',
+                title: '4. My Shapes',
+                content: `
+                <article>
+                    <section style="max-width:850px;margin:auto;line-height:1.8;text-align:justify;">
+                        <h2 style="text-align:center;color:var(--brand);margin-bottom:8px">
+                            MY SHAPE – Piagam Diri & Identitas Naratif
+                        </h2>
+                        <p style="text-align:center;color:var(--muted);margin-top:0;">
+                            oleh Irghi Satya Priangga
+                        </p>
+
+
+                        <h3 style="color:var(--accent);margin-top:32px;">1. S – Signature Strengths (Kekuatan Khas)</h3>
+                        <p>Sedari kecil, orangtuaku selalu mengajarkan hal hal yang baik. 
+                            Dari mulai disiplin, bertanggung jawab, dan menghargai orang lain. 
+                            Karena itu aku tumbuh menjadi seseorang yang selalu disiplin untuk melaksanakan kewajibanku, bertanggungjawab atas apa yang aku lakukan, dan selalu menghargai orang lain atas apa yang mereka lakukan. 
+                            Dari ketiga nilai tersebut, muncul beberapa sifat lain yang melekat dalam diriku. 
+                            Diantaranya adalah selalu ingin tahu dan mempelajari semua hal yang aku suka, dapat mengingat hal-hal detail dari suatu kejadian, mudah bergaul dengan siapapun, dan tidak menyerah untuk sesuatu yang aku cita-citakan. 
+                            Kekuatan khas ku  adalah Long-term memory,  Ambisius, Adaptif, Berorientasi pada Tujuan.</p>
+
+
+                        <h3 style="color:var(--accent);margin-top:28px;">2. H – Heart (Nilai & Gairah)</h3>
+                        <p>Menjadi orang yang perasa sudah melekat dalam diriku. 
+                            Aku selalu membandingkan sesuatu yang terjadi di hidupku dengan sisi logika dan perasaan. 
+                            Perbandingannya selalu setara, tidak pernah ada yang lebih besar atau lebih kecil. 
+                            Nilai ini membuatku menjadi orang yang selalu membuka pikiran lebih besar lagi untuk menyelesaikan sesuatu. 
+                            Aku selalu memikirkan perasaan orang lain dan membandingkannya dengan perasaan dan logikaku untuk melakukan sesuatu. 
+                            Dari situ, aku tergerak untuk lebih berguna dalam dunia teknologi dan membantu sisi psikologi seseorang. 
+                            Dari mulai mengikuti lomba pemmbuatan aplikasi untuk kemasyarakatan (administrasi kenegaraan semua dalam satu aplikasi), menjadi mentor untuk adik kelas yang membutuhkan ilmu untuk berlomba (pengajar OSN Informatika dan Berpikir Komputasional). 
+                            Selain itu dari hobiku di bidang dokumentasi, aku suka menyunting foto dan video untuk membuat orang orang senang bahwa momen mereka didokumentasikan.</p>
+                        <h3 style="color:var(--accent);margin-top:28px;">3. A – Aptitudes & Acquired Skills (Bakat & Keterampilan)</h3>
+                        <p>Untuk sisi bakat alami, aku suka semua hal tentang berhitung sedari kecil. 
+                            Lalu berkembang menjadi aku yang selalu berpikir terstruktur dalam memecahkan suatu masalah. 
+                            Selain itu aku suka eksplorasi. Sebelum menemukan titik jenuh, aku akan mencari tahu sedalam-dalamnya hal yang aku tertarik. 
+                            Banyak keterampilan yang aku pelajari. Yang pertama adalah semua hal tentang dokumentasi, khusunya di bagian penyuntingan video (secara ototdidak, eksplor tools sendiri dan dari youtube) memakai tools Adobe Premiere Pro dan Davinvi Resolve. 
+                            Portofolio penyuntingan videoku disini <a style="color: blue;" href="https://bit.ly/VideoEditIrghi">https://bit.ly/VideoEditIrghi</a> . 
+                            Hal kedua adalah bidang UI/UX khususnya dibagian user flow dan desain UI (secara ototdidak, eksplor tools sendiri, youtube, dan mata kuliah Lab. Interaksi Komputer) memakai tools figma.</p>
+
+
+                        <h3 style="color:var(--accent);margin-top:28px;">P – Personality (Profil Kepribadian)</h3>
+                        <p>Aku bisa mengingat suatu hal jangka panjang dan secara detail. 
+                            Dari mulai hal visual maupun audio. 
+                            Selain itu aku selalu ingin bekerja sama dengan orang lain secara terbuka, melihat semua kemungkinan yang ada dalam menyelesaikan masalah, dan menghargai setiap pendapat yang muncul. 
+                            Mengeksplorasi semua hal dan semua kemungkinan yang muncul dari hal tersebut. 
+                            Sangat imajinatif dalam menyikapi masalah ataupun sesuatu yang ingin dicari tahu. 
+                            Selalu berusaha  secara maksimal terlebih dahulu tanpa terlalu memikirkan hasilnya.</p>
+
+
+                        <h3 style="color:var(--accent);margin-top:28px;">E – Experiences (Pengalaman Hidup)</h3>
+                        <p>Aku tumbuh dengan pengalaman diberbagai kegiatan. Aku rajin mengikuti lomba sejak SD dari mulai kompetisi berhitung, storytelling menggunakan bahasa inggris, sampai olimpiade Infomatika dan Matematika. 
+                            Selain perlombaan aku mengikuti berbagai kegiatan kepanitiaan dan organisasi. 
+                            Dimulai sejak SMP, aku mengikuti komunitas matematika di sekolahku. 
+                            Saat SMA aku mengikuti Organisasi Siswa Intra Sekolah dibidang pendidikan dan hubungan masyarakat, dan Computer Club sebagai pengurus inti dan mentor untuk perlombaan. 
+                            Aktif di kepanitiaan event sekolah dibagian operator dan dokumentasi. 
+                            Sejak kuliah aku baru mendalami tiga hal yaitu bidang pendokumentasian (best staff kepanitiaan wisuda oktober, dewan eksekutif HMIF sebagai staff, Badan Pengurus Angkatan STEI-K 24 sebagai ketua, dan beberapa event fakultas), IT (wisuda april, dan perkuliahan), dan UI/UX (staff Orientasi Studi Keluarga Mahasiswa ITB 2025 dan beberapa perlombaan).</p>
+
+
+                        <h3 style="text-align:center;color:var(--brand);margin-top:36px;">Pernyataan Misi Pribadi</h3>
+                        <blockquote style="font-style:italic;text-align:center;color:var(--muted);margin:20px auto 0;max-width:700px;">
+                            “Kemaslahatan manusia nomor 1. Kenyamanan dan kebebacsan selalu akan ku utamakan. Selalu menjadi manusia yang baik dan mengutamakan hidup yang terstruktur untuk menjalani setiap masalah yang ada. Selalu berguna untuk kemajuan teknologi dunia.”
+                        </blockquote>
+                    </section>
+
+
+                    <div class="shape-wrap">
+                        <div class="shape-caption">Tabel – Piagam Diri (Self Charter) dan Identitas Naratif</div>
+                        <div style="overflow-x:auto;">
+                            <table class="shape-table">
+                                <thead>
+                                    <tr>
+                                        <th>Komponen</th>
+                                        <th>Deskripsi Reflektif</th>
+                                        <th>Contoh Implementasi Nyata</th>
+                                   </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>S – Signature Strengths<br><small>(Kekuatan Khas)</small></th>
+                                        <td>Long-term Memory, Ambisius, Adaptif, Berorientasi pada Tujuan.  Memiliki daya ingat detail (long-term memory) yang didukung sifat ingin tahu. Saya Ambisius dan berorientasi pada tujuan, didorong semangat pantang menyerah. Adaptif dan mudah bergaul, berkat nilai penghargaan terhadap sesama.</td>
+                                        <td>Selalu disiplin dalam mengerjakan lomba ataupun tugas sesuai <i>timeline</i> seperti dalam lomba aplikasi <b>Studify</b> dan <b>Satu Langkah</b>. Mengingat baik negara serta setiap detail dalam benderanya.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>H – Heart<br><small>(Nilai & Gairah)</small></th>
+                                        <td>Membantu sesama dalam memberikan ilmu khususnya dalam bidang teknologi. Senang jika melihat orang lain senang untuk hal hal yang baik. Nilai yang diutamakan perasaan orang lain dan meminimalisir permasalahan.</td>
+                                        <td>Menjadi pengajar OSN Informatika SMAN 1 Garut dan menghasilkan 2 orang juara dan lolos provinsi. Menjadi panitia dokumentasi untuk membuat mereka senang melihat momen mereka terabadikan.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>A – Aptitudes & Acquired Skills<br><small>(Bakat & Keterampilan)</small></th>
+                                        <td>Mudah mempelajari sesuatu, memecahkan masalah sampai ke titik terkecil secara terstruktur. Mengutamakan nilai estetika dan mengusahakan kesempurnaan jika membuat sesuatu.</td>
+                                        <td>Desain UI aplikasi Studify dan Satu Langkah untuk lomba. Membuat teaser ataupun aftermovie suatu event dengan mengutamakan pewarnaan dan pensuasanaan (bisa dilihat dari potofolio diatas).</td>
+                                    </tr>
+                                    <tr>
+                                        <th>P – Personality<br><small>(Profil Kepribadian)</small></th>
+                                        <td>Mengeksplor segala hal secara detail. Selalu aktif dan bebas berimajinasi untuk memecahkan masalah secara terstruktur dan bertahap.</td>
+                                        <td>Mempelajari tentang suatu negara sampai ke bagian kebudayaan, bahasa dan adatnya. MEmbuat plan penyelesaian masalah dengan mendekomposisi ke bagian kecil lalu memikirkan cara menanggualngi per masalah kecil.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>E – Experiences<br><small>(Pengalaman Hidup)</small></th>
+                                        <td>Selalu menemukan masalah ditengah, demotivasi, tetapi selalu mencari jalan lain untuk menanggulanginya, entah itu di bagian perlombaan, kepanitiaan ataupun organisasi.</td>
+
+
+                                        <td>Menjadi best staff divisi dokumentasi Wisuda Oktober ITB 2024. Menjadi ketua BPA divisi Dokumentasi STEI-K 24.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Pernyataan Misi Pribadi</th>
+                                        <td colspan="2">“Mengutamakan kenyamanan dan kebebasan dalam menjalani hidup, berbuat baik selalu dan berusaha untuk tidak keluar jalur. Terstruktur untuk menjalani setiap masalah yang ada. Selalu berguna untuk kemajuan teknologi dunia.”</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="shape-note">Ringkasan ini melengkapi narasi di atas dan bisa dipakai untuk CV/portfolio.</div>
+                    </div>
+                </article>`
+            },
+
             {
                 id: 'personal-reviews',
                 title: '5. My Personal Reviews',
                 content: `<article style="text-align:center;">
-                    <h2 style="color:var(--brand);">Dokumen Penilaian Diri</h2>
-                    <p style="color:var(--muted); margin-bottom:30px;">Hasil penilaian diri terhadap portofolio UTS-5.</p>
-                    <a href="#" class="file-card">
-                        <span class="icon">📊</span>
-                        <div class="info">
-                            <p class="name">UTS-5_Skor_Menilai_Irghi.xlsx</p>
-                            <p style="color:var(--muted); font-size:12px; margin:0;">Author: Irghi Satya Priangga</p>
+                    <h2 style="color:var(--brand);">Penilaian Diri (UTS-5)</h2>
+                    <a href="https://docs.google.com/spreadsheets/d/1vcRkG518f2JhgGZ8X6KQPsz-SiRMErF1qsvWjkkyBtw/edit?usp=sharing" target="_blank" class="file-card">
+                        <span style="font-size:30px;">📊</span>
+                        <div style="text-align:left;">
+                            <p style="margin:0; font-weight:600;">UTS-5_Skor Menilai_18224041.xlsx</p>
+                            <p style="margin:0; font-size:12px; color:var(--muted);">Author: Irghi Satya Priangga [cite: 101]</p>
                         </div>
                     </a>
                 </article>`
-            }
+            },
+            // BAGIAN 6-12 YANG TIDAK BOLEH HILANG 
+            { id: 'my-concepts', title: '6. My Concepts', content: placeholder('My Concepts') },
+            { id: 'my-opinions', title: '7. My Opinions', content: placeholder('My Opinions') },
+            { id: 'my-innovations', title: '8. My Innovations', content: placeholder('My Innovations') },
+            { id: 'my-knowledge', title: '9. My Knowledge', content: placeholder('My Knowledge') },
+            { id: 'pro-reviews', title: '10. My Professional Reviews', content: placeholder('My Professional Reviews') },
         ];
 
-        // --- Logika Navigasi & Search ---
+        // LOGIKA NAVIGASI & SEARCH 
         const toc = document.getElementById('toc');
         const contentEl = document.getElementById('page-content');
         const titleEl = document.getElementById('page-title');
 
         function renderToc() {
-            const q = document.getElementById('search').value.toLowerCase();
-            const filtered = PAGES.filter(p => p.title.toLowerCase().includes(q));
+            const q = document.getElementById('search').value.toLowerCase().trim();
+            const filtered = PAGES.filter(p => p.title.toLowerCase().includes(q) || p.content.toLowerCase().includes(q));
             
-            toc.innerHTML = filtered.map(p => 
-                `<li><a href="#${p.id}" data-id="${p.id}">${p.title}</a></li>`
-            ).join('');
-
-            bindToc();
+            toc.innerHTML = filtered.map(p => `<li><a href="#${p.id}" data-id="${p.id}">${p.title}</a></li>`).join('');
+            bindEvents();
             const activeId = location.hash.slice(1) || PAGES[0].id;
             setActive(activeId);
         }
 
-        function bindToc() {
+        function bindEvents() {
             toc.querySelectorAll('a').forEach(a => a.addEventListener('click', (e) => {
                 e.preventDefault();
-                history.pushState(null, '', '#' + a.dataset.id);
+                location.hash = a.dataset.id;
                 setActive(a.dataset.id);
             }));
         }
@@ -303,8 +480,6 @@
 
         document.getElementById('search').addEventListener('input', renderToc);
         window.addEventListener('hashchange', () => setActive(location.hash.slice(1)));
-        
-        // Initial Run
         renderToc();
     </script>
 </body>
