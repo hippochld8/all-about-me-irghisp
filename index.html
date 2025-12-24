@@ -149,14 +149,29 @@
 
         // Helper: minimal welcome page function (was referenced but missing)
         function selamatBerjumpa() {
-            return `
-                <article>
-                    <section style="max-width:800px;margin:auto;line-height:1.7;text-align:center;">
-                        <h2 style="color:var(--brand);">Selamat datang!</h2>
-                        <p style="color:var(--muted);">Ini adalah portofolio Irghi Satya Priangga. Jelajahi menu di kiri untuk melihat halaman lain.</p>
-                    </section>
-                </article>`;
+            return `<article>
+                <div class='meta'>
+                    <div><b>Author</b><br>Irghi Satya Priangga</div>
+                    <div><b>Published</b><br>${new Date().toLocaleDateString('id-ID')}</div>
+                </div>
+                <div class='divider'></div>
+                <div class='hero-wrapper'>
+                    <div class='hero'>
+                        <div class='copy'>
+                            <h2>Quit Talking and Start Coding</h2>
+                            <p>Informatics and Geography Enthusiast yang suka banget teknologi dan suka hapalin nama dan bendera negara yang ada di dunia!</p>
+                        </div>
+                        <div class='img' style="background-image: var(--profile-image);"></div> 
+                        </div>
+                </div>
+                <section style='margin-top:40px;max-width:800px;margin:40px auto;line-height:1.7;'>
+                    <h3 style='text-align:center;color:var(--accent);'>About me</h3>
+                    <p style='text-align:center;'>Seorang mahasiswa tingkat 2 di Sekolah Teknik Elektro dan Informatika-Komputasi Institut Teknologi Bandung.</p>
+                    <p style='text-align:center;'>Berkecimpung di dunia informatika khususnya pada bidang UI/UX dan Web Development.</p>
+                </section>
+            </article>`;
         }
+
 
         // Helper: placeholder content generator for missing pages
         function placeholder(title) {
