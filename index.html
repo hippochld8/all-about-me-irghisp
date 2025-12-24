@@ -147,6 +147,27 @@
         // Menggunakan fetch ID file yang diunggah
         const FILE_EXCEL_URL = 'uploaded:UTS-5_Skor Menilai_18224041.xlsx - Scores.csv-0a9163e7-8b09-4017-94d3-e7a93540e5ec';
 
+        // Helper: minimal welcome page function (was referenced but missing)
+        function selamatBerjumpa() {
+            return `
+                <article>
+                    <section style="max-width:800px;margin:auto;line-height:1.7;text-align:center;">
+                        <h2 style="color:var(--brand);">Selamat datang!</h2>
+                        <p style="color:var(--muted);">Ini adalah portofolio Irghi Satya Priangga. Jelajahi menu di kiri untuk melihat halaman lain.</p>
+                    </section>
+                </article>`;
+        }
+
+        // Helper: placeholder content generator for missing pages
+        function placeholder(title) {
+            return `
+                <article>
+                    <section style="max-width:800px;margin:auto;line-height:1.7;text-align:center;">
+                        <h2 style="color:var(--brand);">${title}</h2>
+                        <p style="color:var(--muted);">Konten akan segera ditambahkan di sini.</p>
+                    </section>
+                </article>`;
+        }
 
         const PAGES = [
             { id: 'selamat-berjumpa', title: 'Perkenalan diri', content: selamatBerjumpa() },
