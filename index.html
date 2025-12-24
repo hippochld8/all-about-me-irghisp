@@ -44,7 +44,7 @@
         }
         @keyframes twinkle { from { opacity: 0.3; } to { opacity: 0.8; } }
 
-        .wrap { display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; }
+    .wrap { display: grid; grid-template-columns: 320px 1fr; min-height: 100vh; position: relative; z-index: 1; }
 
         aside {
             background: rgba(10, 12, 16, 0.8); backdrop-filter: blur(25px);
@@ -497,11 +497,202 @@
                 `
             },
              
-            { id: 'my-concepts', title: '6. My Concepts', content: placeholder('My Concepts') },
-            { id: 'my-opinions', title: '7. My Opinions', content: placeholder('My Opinions') },
-            { id: 'my-innovations', title: '8. My Innovations', content: placeholder('My Innovations') },
-            { id: 'my-knowledge', title: '9. My Knowledge', content: placeholder('My Knowledge') },
-            { id: 'pro-reviews', title: '10. My Professional Reviews', content: placeholder('My Professional Reviews') },
+            { id: 'my-concepts', title: '6. My Concepts', content: `
+                <article>
+                    <section style="max-width:850px;margin:auto;line-height:1.8;text-align:justify;">
+                        <h2 style="text-align:center;color:var(--brand);margin-bottom:8px"><strong>Menentang Adiksi Digital: Transformasi UI/UX dari <em>"Passive Comfort"</em> menjadi <em>"Active Empowerment"</em></strong></h2>
+
+                        <p>Sebagai praktisi Sistem dan Teknologi Informasi di bidang UI/UX Design, saya melihat bahwa "kemalasan" manusia modern adalah produk dari Dark Patterns dan desain yang terlalu fokus pada Usability tanpa Responsibility. Untuk mewujudkan <strong>Mahakarya Kolektif</strong>, peran saya adalah meredefinisi hubungan antara manusia dan antarmuka (interface) agar tidak menjadi budak algoritma.</p>
+
+                        <p><strong>Berikut adalah dekonstruksi teknis peran saya dalam menyelaraskan <em>Triune Intelligence</em>:</strong></p>
+
+                        <ol>
+                            <li><strong>Pikiran (PI-A): Dari <em>Frictionless</em> menuju <em>Mindful Friction</em></strong>
+                                <p>Dalam UI/UX konvensional, tujuannya adalah menghilangkan hambatan (<em>friction</em>). Namun, untuk mencegah kemalasan kognitif, saya akan menerapkan <em>Mindful Interaction Design</em>:</p>
+                                <ul>
+                                    <li><strong>Desain Interaksi Proaktif:</strong> Alih-alih antarmuka yang memberikan <em>"jawaban instan"</em> (membuat pikiran tumpul), saya merancang UX yang memberikan scaffolding (dukungan bertahap). Misalnya, AI tidak langsung memberikan solusi, melainkan menyajikan visualisasi data yang menuntut pengguna melakukan sintesis logis.</li>
+                                    <li><strong>Cognitive Engagement:</strong> Menggunakan elemen <em>Progressive Disclosure</em> bukan untuk menyembunyikan kompleksitas, tetapi untuk mengajak pengguna berpartisipasi dalam pengambilan keputusan secara sadar, sehingga <em>Synergistic Practical Intelligence</em> benar-benar tercipta.</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>Hati (<em>Homocordium</em>): <em>Axiological UX</em> (Value-Driven Design)</strong>
+                                <p>UI/UX bukan sekadar tentang estetika, tapi tentang Komunikasi Publik yang etis. Saya akan menerapkan:</p>
+                                <ul>
+                                    <li><strong>Humane Design Standards:</strong> Menghapus fitur-fitur manipulatif seperti <em>infinite scroll</em> atau <em>predatory notifications</em> yang menginterupsi <em>Homocordium</em> (hati/moral). Sebagai gantinya, saya merancang antarmuka yang menghormati otonomi pengguna.</li>
+                                    <li><strong>Empathy Mapping for Collective Values:</strong> Dalam proses User Research, saya tidak hanya mencari apa yang pengguna "ingin" secara impulsif, tetapi apa yang "bernilai" (Axiological) bagi keberlangsungan hidup mereka sebagai bagian dari 8 miliar manusia.</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>Tenaga (PSKVE): Optimalisasi Human Energon melalui UX</strong>
+                                <p>Sebagai pengelola "Tenaga", UI/UX yang saya bangun harus menghemat Human Energon (fokus dan waktu) agar bisa dialokasikan untuk kreativitas nyata, bukan habis untuk konsumsi pasif:</p>
+                                <ul>
+                                    <li><strong>Product & Service (P/S):</strong> Produk digital harus memiliki <em>Intermittent Access</em>—fitur yang mendorong pengguna untuk selesai menggunakan aplikasi dan kembali beraksi di dunia nyata.</li>
+                                    <li><strong>Environmental & Knowledge (E/K):</strong> Menggunakan <em>Dark Mode</em> default atau <em>Eco-mode UX</em> untuk mengurangi konsumsi energi perangkat (Environmental Energon) dan memastikan setiap pixel yang ditampilkan berkontribusi pada pengetahuan (Knowledge), bukan distraksi.</li>
+                                </ul>
+                            </li>
+                        </ol>
+
+                        <h3 style="text-align:center;color:var(--accent);">Peran Strategis: <strong>Sebagai <em>Choice Architect</em> (Arsitek Pilihan)</strong></h3>
+
+                        <p>Dalam ekosistem TISE, saya bukan sekadar pembuat tombol yang cantik. Saya adalah seorang <strong>Choice Architect</strong>. Mahakarya saya adalah sistem yang melalui desainnya, memaksa manusia untuk tetap menjadi <strong>Protagonis-Penulis</strong>.</p>
+
+                        <p>Saya menggunakan keahlian UI/UX untuk memastikan bahwa ketika 8 miliar manusia berinteraksi dengan "Pikiran" (AI), mereka tidak kehilangan "Hati" mereka karena rasa malas, melainkan tetap terjaga energinya untuk bersama-sama mengorkestrasi narasi bumi yang lebih baik melalui <strong>CORE Engine</strong> yang berkelanjutan.</p>
+                    </section>
+                </article>` },
+            { id: 'my-opinions', title: '7. My Opinions', content: `
+                <article>
+                    <section style="max-width:850px;margin:auto;line-height:1.8;text-align:justify;">
+                        <h2 style="text-align:center;color:var(--brand);margin-bottom:8px"><strong>Menuju Kurikulum "<em>Human-Centered Agency</em>": Mentransformasi Pendidikan UI/UX dari Operator Alat Menjadi <strong>Arsitek Nilai</strong></strong></h2>
+
+                        <h3 style="color:var(--accent);">I. Krisis "Kemalasan Desain" di Era <em>Generative AI</em></h3>
+                        <p>Dalam pandangan saya, pendidikan STI, khususnya di bidang UI/UX, saat ini sedang mengalami krisis identitas akibat supremasi <em>AI</em>. Model pembelajaran konvensional yang hanya fokus pada penguasaan software desain (seperti <em>Figma</em> atau <em>Adobe</em>) kini tidak lagi relevan. <em>AI</em> dapat menghasilkan wireframe, memilih palet warna, bahkan menulis kode front-end dalam hitungan detik.</p>
+
+                        <p>Jika mahasiswa UI/UX hanya dilatih untuk menjadi "Aktor" yang mengeksekusi instruksi desain, mereka akan terjebak dalam kemalasan kognitif. Mereka akan menjadi "pengguna pasif" yang hanya menerima rekomendasi algoritma tanpa mempertanyakan nilai etisnya. Krisis ini memperburuk masalah yang saya angkat di Bagian 1: teknologi yang seharusnya memberdayakan justru membuat manusianya kehilangan agensi dan kemampuan berpikir kritis.</p>
+
+                        <h3 style="color:var(--accent);">II. <strong>VALORAIZE Learning</strong>: Ruang Kelas sebagai Studio Desain Profesional</h3>
+                        <p>Untuk melawan ketergantungan ini, saya mengusulkan penerapan <strong>VALORAIZE Learning</strong> dalam pendidikan UI/UX. Ruang kelas harus berubah menjadi miniatur lingkungan kerja di mana mahasiswa adalah <strong>Protagonis-Penulis</strong> yang bertanggung jawab atas narasi desain mereka sendiri.</p>
+
+                        <p>Transformasi ini dilakukan melalui tiga pilar utama yang menyelaraskan <em>Triune Intelligence</em> saya:</p>
+
+                        <ol>
+                            <li><strong>Penciptaan Artefak: Peta Pengetahuan UI/UX yang Manusiawi</strong>
+                                <p>Mahasiswa tidak lagi dinilai dari "hasil akhir aplikasi" yang mungkin saja dibuatkan oleh <em>AI</em>. Penilaian harus fokus pada:</p>
+                                <ul>
+                                    <li><strong>Peta Pengetahuan Primitif:</strong> Penguasaan prinsip dasar psikologi kognitif dan desain (fakta dan definisi).</li>
+                                    <li><strong>Peta Pengetahuan Aplikatif:</strong> Dokumentasi proses penalaran (<em>Reasoning</em>) mengapa sebuah user flow dirancang untuk memicu "<em>mindful friction</em>" (mengajak user berpikir) daripada sekadar "<em>seamless interaction</em>" yang memanjakan. Ini adalah pembuktian bahwa <strong>Pikiran (PI-A)</strong> manusia tetap memegang kendali atas <em>AI</em>.</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>Knowledge Marketplace: Menjual Solusi Anti-Adiksi</strong>
+                                <p>Dalam model <strong>Knowledge Marketplace</strong>, dosen bertindak sebagai "Pencipta Kebutuhan" yang mencari solusi atas masalah ketergantungan digital. Sebagai mahasiswa, saya bertindak sebagai "Pencipta Nilai" dengan menjual desain antarmuka yang:</p>
+                                <ul>
+                                    <li>Menghargai <strong>Human Energon</strong> (fokus dan waktu pengguna).</li>
+                                    <li>Memiliki nilai <strong>Axiological</strong> (Hati) tinggi karena bebas dari dark patterns. Karya saya dibeli bukan karena kecanggihannya, tapi karena kemampuannya dalam memberdayakan pemangku kepentingan untuk menyelesaikan masalah mereka sendiri, bukan membuat mereka semakin malas.</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>Portofolio Kekayaan Rekayasawan: Jurnal Sang Protagonis</strong>
+                                <p>Nilai akhir saya adalah akumulasi dari "harta intelektual" yang saya kumpulkan. Portofolio ini bukan sekadar kumpulan gambar cantik (<em>Dribbble-style</em>), melainkan sebuah <strong>Jurnal Pembelajar Reflektif</strong>. Di dalamnya, saya mendokumentasikan:</p>
+                                <ul>
+                                    <li>Bagaimana saya bernegosiasi dengan <em>AI</em> tanpa kehilangan kreativitas asli saya.</li>
+                                    <li>Kegagalan saya dalam merancang sistem yang ternyata masih memicu kemalasan pengguna, dan bagaimana saya memperbaikinya.</li>
+                                </ul>
+                                <p>Ini adalah bukti <strong>Penalaran Otobiografis</strong> saya sebagai desainer yang memiliki prinsip.</p>
+                            </li>
+                        </ol>
+
+                        <h3 style="color:var(--accent);">III. Kesimpulan: Rekayasa Pendidikan sebagai <strong>Rekayasa Kehendak</strong></h3>
+                        <p>Opini saya tegas: di era <em>AI</em>, pendidikan STI tidak boleh menghasilkan "operator mesin" yang pasif. Dengan pendekatan <strong>VALORAIZE</strong>, kita melatih mahasiswa UI/UX untuk menjadi <strong>Arsitek Pilihan</strong>. Kita tidak hanya belajar untuk "menyelesaikan masalah teknis", tapi belajar untuk membangun lingkungan kerja (dan dunia digital) yang berkelanjutan, di mana manusia tetap menjadi subjek yang berdaulat, bukan objek dari teknologi yang memanjakan.</p>
+                    </section>
+                </article>` },
+            { id: 'my-innovations', title: '8. My Innovations', content: `
+                <article>
+                    <section style="max-width:850px;margin:auto;line-height:1.8;text-align:justify;">
+                        <h2 style="text-align:center;color:var(--brand);margin-bottom:8px"><strong>Arsitektur Interaksi Agentik: Rekayasa UI/UX untuk <strong>Kedaulatan Kognitif</strong></strong></h2>
+
+                        <p>Inovasi utama saya adalah sebuah sistem <em>"Teater Kerja"</em> Agentik yang dirancang khusus untuk memutus rantai kemalasan digital. Jika desain konvensional bertujuan membuat segalanya menjadi <em>seamless</em> hingga manusia berhenti berpikir, inovasi saya justru merancang lingkungan digital yang memberdayakan <strong>Agensi</strong> pengguna melalui orkestrasi komponen-komponen berikut:</p>
+
+                        <ol>
+                            <li><strong>Stasion: Transformasi Energon dalam Antarmuka</strong>
+                                <p>Dalam inovasi ini, <strong>Stasion</strong> adalah titik-titik krusial dalam sebuah aplikasi atau sistem informasi di mana nilai diciptakan.</p>
+                                <p><strong>Stasion Ide (Input):</strong> UI dirancang untuk tidak menerima instruksi yang malas. Pengguna harus mendefinisikan tujuan secara jelas, mengubah <strong>Human Energon</strong> (fokus) menjadi niat yang terstruktur.</p>
+                                <p><strong>Stasion Produk (Output):</strong> Hasil akhir bukan sekadar otomatisasi <em>AI</em>, melainkan artefak yang mencerminkan kolaborasi aktif antara manusia dan mesin, memastikan hasil yang memiliki <strong>Nilai (Value)</strong> nyata bagi sesama.</p>
+                            </li>
+
+                            <li><strong>Kendaraan (<em>Agen PUDAL</em>): UX sebagai Partner, Bukan Pelayan</strong>
+                                <p>Untuk bergerak antar stasiun, pengguna menggunakan "kendaraan" berupa <em>Agen Pemecah Masalah</em> (<em>Problem Solving Agent</em>). Inovasi saya terletak pada antarmuka yang mengoperasikan siklus kognitif <strong>PUDAL</strong> secara transparan:</p>
+                                <ul>
+                                    <li><strong>Perceive &amp; Understand:</strong> Interface memvisualisasikan data mentah agar pengguna dipaksa untuk "Melihat" dan "Memahami" pola sebelum <em>AI</em> memberikan saran.</li>
+                                    <li><strong>Decision &amp; Act:</strong> Keputusan tetap berada di tangan manusia. UI dirancang untuk memberikan pilihan-pilihan strategis yang menuntut penalaran logis, bukan sekadar tombol "Ok" yang pasif.</li>
+                                    <li><strong>Learning-evaluating:</strong> Di akhir setiap proses, sistem menampilkan refleksi dari tindakan yang diambil, memaksa pengguna untuk belajar dari kegagalan atau keberhasilan desain tersebut.</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>Jaringan Rute Jalan: Siklus 7-Langkah Pemecahan Masalah</strong>
+                                <p>Inovasi ini memastikan pengguna tidak bergerak secara acak atau terjebak dalam konsumsi pasif. Alur kerja (<em>User Flow</em>) dalam sistem ini mengikuti <strong>Rute Siklus 7-Langkah</strong>: Mulai dari Identifikasi Masalah hingga <em>Lesson Learned</em>. Setiap langkah dalam antarmuka adalah manifestasi dari alur kerja terstruktur yang menjaga agar pengguna tetap berada dalam peran sebagai <strong>Protagonis-Penulis</strong>, bukan sekadar penonton dari proses yang dilakukan oleh mesin.</p>
+                            </li>
+
+                            <li><strong>CORE Engine: Mesin Penggerak Fokus Manusia</strong>
+                                <p>Inovasi ini ditenagai oleh <strong>CORE Engine</strong>, sebuah mesin konseptual yang bertugas mengelola "bahan bakar" utama manusia, yaitu waktu dan perhatian.</p>
+                                <p>Mesin ini bekerja sebagai transducer yang mengubah input perhatian manusia menjadi <strong>Working Energon</strong>.</p>
+                                <p>Melalui siklus <em>Input-Encode-Decode-Output</em>, <strong>CORE Engine</strong> memastikan bahwa setiap interaksi digital yang dirancang melalui UI/UX saya memberikan imbal balik berupa pengetahuan atau solusi nyata, bukan sekadar membuang-buang energi manusia dalam lingkaran adiksi.</p>
+                            </li>
+
+                            <li><strong>Fundamental Riset PSKVE sebagai Bahan Bakar</strong>
+                                <p>Inovasi ini tidak berdiri di atas tren desain yang dangkal, melainkan di atas <strong>Riset Fundamental PSKVE</strong>. Riset inilah yang memberikan prinsip-prinsip bagaimana mengubah <strong>Human Energon</strong> (tenaga manusia) menjadi <strong>Knowledge Energon</strong> (pengetahuan) secara efisien. Dengan prinsip ini, saya merancang sistem yang tahu kapan harus mempermudah tugas dan kapan harus memberikan tantangan agar kapasitas kognitif manusia tetap berkembang.</p>
+                            </li>
+                        </ol>
+
+                        <p><strong>Kesimpulan: Inovasi untuk Manusia yang Berdaulat</strong></p>
+                        <p>Secara singkat, inovasi saya adalah arsitektur full-stack untuk melawan kemalasan digital. Dimulai dari <strong>Riset PSKVE</strong> sebagai prinsip dasar, ditenagai oleh <strong>CORE Engine</strong> yang menjaga fokus, dieksekusi melalui <em>Agen PUDAL</em> sebagai mitra kognitif, dan dipandu oleh <strong>Rute 7-Langkah</strong> yang disiplin. Semua ini terjadi di dalam sebuah <em>Teater Kerja</em> yang saya rancang sebagai desainer UI/UX untuk memastikan bahwa 8 miliar manusia tidak menjadi malas, melainkan menjadi individu-individu yang berdaya, agentik, dan mampu menciptakan <strong>mahakarya kolektif</strong> bagi masa depan.</p>
+                    </section>
+                </article>` },
+            { id: 'my-knowledge', title: '9. My Knowledge', content: `
+                <article>
+                    <section style="max-width:850px;margin:auto;line-height:1.8;text-align:justify;">
+                        <h2 style="text-align:center;color:var(--brand);margin-bottom:8px"><strong>Metodologi <em>VALORISE</em>: Rekayasa Pedagogi untuk <strong>Kedaulatan Desainer UI/UX</strong></strong></h2>
+
+                        <p>Untuk menguasai paradigma rekayasa sistem yang saya ajukan, metode belajar hafalan tidak lagi relevan. Saya menerapkan metodologi <em>VALORISE</em> untuk menyelesaikan "Paradoks UI/UX di Era <em>AI</em>": Bagaimana kita menggunakan <em>AI</em> yang bisa mendesain segalanya secara instan tanpa membuat desainer manusia kehilangan kemampuan berpikir dan berkreasi (<strong>Agensi</strong>)?</p>
+
+                        <p>Berikut adalah penerapan <em>VALORISE</em> dalam perjalanan pengetahuan saya sebagai mahasiswa Sistem dan Teknologi Informasi:</p>
+
+                        <ol>
+                            <li><strong>Struktur Kurikulum: Navigasi Peta <em>ASTF</em></strong>
+                                <p>Saya tidak belajar UI/UX sebagai daftar tools (seperti hanya belajar <em>Figma</em>), melainkan melalui Arsitektur <em>ASTF</em>:</p>
+                                <ul>
+                                    <li><strong>Peta Pengetahuan (Fundamental &amp; Teknologi - <em>F/T</em>):</strong> Saya harus menguasai lapisan dasar, yaitu prinsip psikologi kognitif (F) dan keterbatasan algoritma <em>AI</em> (T). Saya memahami bagaimana <strong>Human Energon</strong> bekerja dan bagaimana antarmuka bisa menguras atau memberdayakan energi tersebut.</li>
+                                    <li><strong>Peta Aplikasi (Sistem &amp; Aplikasi - <em>S/A</em>):</strong> Saya menerapkan prinsip dasar tersebut untuk merancang Sistem informasi yang kompleks dan Aplikasi nyata yang memecahkan masalah kemalasan digital pada pengguna.</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>Proses Validasi: <em>W-Model</em> &amp; <em>PICOC</em> Berlapis</strong>
+                                <p>Pembelajaran saya tidak linear, melainkan mengikuti <em>W-Model</em>. Saya mulai dari masalah nyata di lapisan Aplikasi (misalnya: adiksi media sosial), lalu turun ke lapisan Fundamental untuk meriset prinsip mindful interaction. Setelah itu, saya naik kembali untuk membangun solusi teknologi yang tervalidasi.</p>
+                                <p>Untuk membuktikan penguasaan saya, saya menggunakan <em>PICOC</em> Berlapis. Saya harus membangun "rantai bukti" di setiap lapisan <em>ASTF</em>:</p>
+                                <ul>
+                                    <li><strong>Lapis F:</strong> Terbukti prinsip desain saya mampu menjaga fokus manusia.</li>
+                                    <li><strong>Lapis T:</strong> Terbukti teknologi yang saya gunakan efisien dan tidak manipulatif.</li>
+                                    <li><strong>Lapis S &amp; A:</strong> Terbukti sistem dan aplikasi saya memberikan kepuasan yang bermakna bagi pengguna, bukan sekadar kepuasan instan.</li>
+                                </ul>
+                            </li>
+
+                            <li><strong>Penyelesaian Paradoks: Desain "<em>Anti-Answer Constraint</em>"</strong>
+                                <p>Inilah inti dari pengetahuan saya. Dalam belajar menggunakan <em>AI</em> (sebagai <em>Agen PUDAL</em>), saya menerapkan <strong>Anti-Answer Constraint</strong>.</p>
+                                <p>Saya tidak menggunakan <em>AI</em> untuk bertanya: "Buatkan desain checkout yang paling cepat." (Ini adalah pemberdayaan mesin yang melemahkan saya).</p>
+                                <p>Sebaliknya, saya menggunakan <em>AI</em> untuk memprovokasi pikiran saya dengan pertanyaan reflektif: "Bagaimana alur checkout ini tetap menjaga kesadaran pengguna agar tidak konsumtif?"</p>
+                            </li>
+
+                            <li><strong>Penyelesaian: Menjadi <strong>Protagonis-Penulis</strong> dalam Pembelajaran</strong>
+                                <p>Melalui metodologi <em>VALORISE</em>, saya menggunakan <em>AI</em> bukan sebagai pengganti otak saya, melainkan sebagai alat untuk memicu <strong>Penalaran Otobiografis</strong>. Saya dipaksa untuk terus bertanya pada diri sendiri tentang pilihan desain yang saya ambil.</p>
+                                <p>Pengetahuan saya bukan sekadar tentang "bisa mendesain", tapi tentang menjadi <strong>Protagonis-Penulis</strong> yang memiliki <strong>Self-Authorship</strong>. Di era <em>AI</em>, pengetahuan sejati bagi seorang desainer UI/UX adalah kemampuan untuk tetap berdaya dan memastikan bahwa setiap pixel yang ia buat adalah alat untuk pemberdayaan manusia, bukan mesin untuk menciptakan kemalasan.</p>
+                            </li>
+                        </ol>
+
+                    </section>
+                </article>` },
+            { id: 'pro-reviews', title: '10. My Professional Reviews', content: 
+                `
+                <article>
+                    <section style="max-width:800px;margin:auto;line-height:1.7;text-align:center;">
+                        <h2 style="color:var(--brand);margin-bottom:20px;">Dokumen Penilaian Diri (UTS-5)</h2>
+                        <p style="color:var(--muted);margin-bottom:30px;">
+                            Dokumen ini berisi hasil penilaian diri terhadap portofolio yang telah dibuat.
+                        </p>
+
+
+                        <a href="https://docs.google.com/spreadsheets/d/1uP9gHh1BjQzEN7F2guzrbmAT9HppVY_2PzDwye8N0Dg/edit?usp=sharing" target="_blank" class="file-card">
+                            <span class="icon" style="font-size: 30px; color: #217346;">📊</span>
+                            <div class="info">
+                                <p class="name">UAS-10_Skor Menilai_18224041.xlsx</p>
+                                <p class="author">Author: Irghi Satya Priangga</p>
+                            </div>
+                        </a>
+                        
+                        <p style="font-size:14px; color:var(--muted); margin-top: 10px; text-align: center;">
+                            <small>File Excel Penilaian Diri dapat diakses melalui tautan di atas.</small>
+                        </p>
+                        
+                    </section>
+                </article>` },
         ];
 
         // LOGIKA NAVIGASI & SEARCH 
