@@ -127,60 +127,62 @@
     </style>
 </head>
 <body>
-    <div class="stars-container"></div>
     <div class="wrap">
         <aside>
             <div class="brand">Irghi Satya Priangga</div>
-            <div class="search"><input id="search" type="search" placeholder="Cari kata.."></div>
+            <div class="search"><input id="search" type="search" placeholder="Cari kata…"></div>
             <ul id="toc" class="toc"></ul>
         </aside>
+
+
         <main>
-            <div style="color:var(--muted); font-size: 12px; margin-bottom: 10px;">Portfolio Asesmen II-2100 KIPP</div>
-            <h1 id="page-title" style="color: #fff; text-shadow: 0 0 10px var(--glow); margin-bottom: 30px;"></h1>
+            <div class="crumb">Portfolio Asesmen II-2100 KIPP</div>
+            <h1 id="page-title">Perkenalan Diri</h1>
             <div id="page-content"></div>
         </main>
     </div>
 
+
     <script>
-        function placeholder(title) {
-            return `<article><p style='color:var(--muted); text-align:center; padding: 50px;'>Halaman <b>${title}</b> masih kosong. Silakan isi konten di sini nanti.</p></article>`;
-        }
+        // Menggunakan fetch ID file yang diunggah
+        const FILE_EXCEL_URL = 'uploaded:UTS-5_Skor Menilai_18224041.xlsx - Scores.csv-0a9163e7-8b09-4017-94d3-e7a93540e5ec';
+
 
         const PAGES = [
-            { 
-                id: 'selamat-berjumpa', 
-                title: 'Perkenalan diri', 
-                content: `<article>
-                    <div class="meta">
-                        <div><b>Author</b><br>Irghi Satya Priangga</div>
-                        <div><b>Published</b><br>${new Date().toLocaleDateString('id-ID')}</div>
-                    </div>
-                    <div class='hero'>
-                        <div class='copy'>
-                            <h2>Quit Talking and Start Coding</h2>
-                            <p>Informatics and Geography Enthusiast yang suka banget teknologi dan suka hapalin nama dan bendera negara yang ada di dunia!</p>
-                        </div>
-                        <div class='img'></div>
-                    </div>
-                    <section style='margin-top:40px; text-align:center; line-height:1.8;'>
-                        <h3 style='color:var(--brand);'>About me</h3>
-                        <p>Seorang mahasiswa tingkat 2 di Sekolah Teknik Elektro dan Informatika-Komputasi Institut Teknologi Bandung.</p>
-                        <p>Berkecimpung di dunia informatika khususnya pada bidang UI/UX dan Web Development.</p>
+            { id: 'selamat-berjumpa', title: 'Perkenalan diri', content: selamatBerjumpa() },
+            
+            { id: 'kisah-identitas',
+                title: '1. All About Me',
+                content: `
+                <article>
+                    <section style="max-width:800px;margin:auto;line-height:1.7;">
+                        <h2 style="text-align:center;color:var(--brand);">Hello World!</h2>
+                        <p>
+                            Perkenalkan, <b>Irghi Satya Priangga</b>, mahasiswa tingkat 2 yang sangat suka dunia informatika. 
+                            Mengenal informatika sejak masa SMA dan langsung menyukai semua hal didalamnya. 
+                            Eksplor hal-hal tentang informatika merupakan hal yang sangat menyenangkan. 
+                            Khususnya pada bidang UI/UX. Mendesain aplikasi sangatlah penting menurut saya. 
+                            Bukan hanya tentang estetika, tetapi tentang sisi fungional yang memudahkan user untuk memakai suatu aplikasi.
+                        </p>
+                        <p>
+                            Aktif di berbagai kegiatan kepanitiaan pada bidang dokumentasi dan IT. 
+                            Suka belajar tentang penyuntingan video dan fotografi. 
+                            Saya memilih dokumentasi karena saya senang melihat orang lain bisa senang saat momen momen mereka diabadikan, ada perasaan senang tersendiri. 
+                            Saya mengikuti divisi Media Informasi di HMIF dan sebelumnya pernah menjadi Ketua Dokumentasi BPA STEI-K24. 
+                            Mempunyai portofolio penyuntingan video yang cukup banyak. Di divisi IT berpengalaman di sub divisi UI/UX.
+                        </p>
+                        <p>
+                            Diluar bidang yang saya jalani sekarang ada hal yang saya sangat suka. 
+                            Yaitu geografi, khususnya tentang kenegaraan. 
+                            Mengahapal nama negara, benderanya, keunikan, sampai bahasanya merupakan hal menyenangkan. 
+                            Pada saat kelas 1 SD, saya dibelikan buku atlas oleh orang tua yang dimana dibagian belakang ada negara di dunia beserta benderanya.
+                        </p>
                     </section>
                 </article>`
             },
-            {
-                id: 'kisah-identitas',
-                title: '1. All About Me',
-                content: `<article style="line-height:1.8; text-align:justify;">
-                    <h2 style="text-align:center;color:var(--brand);">Hello World!</h2>
-                    <p>Perkenalkan, <b>Irghi Satya Priangga</b>, mahasiswa tingkat 2 yang sangat suka dunia informatika[cite: 25, 618]. Mengenal informatika sejak masa SMA dan langsung menyukai semua hal didalamnya. Eksplor hal-hal tentang informatika merupakan hal yang sangat menyenangkan[cite: 26, 619]. Khususnya pada bidang UI/UX. Mendesain aplikasi sangatlah penting menurut saya[cite: 27, 620]. Bukan hanya tentang estetika, tetapi tentang sisi fungional yang memudahkan user untuk memakai suatu aplikasi[cite: 28, 621].</p>
-                    <p>Aktif di berbagai kegiatan kepanitiaan pada bidang dokumentasi dan IT. Suka belajar tentang penyuntingan video dan fotografi[cite: 29, 622]. Saya mengikuti divisi Media Informasi di HMIF dan sebelumnya pernah menjadi Ketua Dokumentasi BPA STEI-K24[cite: 31, 624].</p>
-                    <p>Diluar bidang yang saya jalani sekarang ada hal yang saya sangat suka. Yaitu geografi, khususnya tentang kenegaraan[cite: 33, 626]. Mengahapal nama negara, benderanya, keunikan, sampai bahasanya merupakan hal menyenangkan. Pada saat kelas 1 SD, saya dibelikan buku atlas oleh orang tua yang dimana dibagian belakang ada negara di dunia beserta benderanya [cite: 34-35, 627-628].</p>
-                </article>`
-            },
-            {
-                id: 'my-songs',
+
+
+            { id: 'my-songs',
                 title: '2. My Song for You',
                 content: `
                     <article style="max-width:800px;margin:auto;">
@@ -234,6 +236,8 @@
                             I'm sorry for all the things I've done<br>
                             Maybe in another life you will find the better me
                         </p>
+
+
                         <p>
                             <b>[Chorus]</b><br>
                             I'll leave you<br>
@@ -257,9 +261,10 @@
                             Yeah, you are the one<br>
                             The one in my heart, no one can get you out
                         </p>
-                    </div>
-                </article>`
+                    </article>`
             },
+
+
             { id: 'my-stories',
                 title: '3. My Stories for You',
                 content: `
@@ -274,7 +279,8 @@
 
 
                         <p>Hari-hari berlalu, rasa senang dihatiku tidak pernah pudar. 
-                            Lalu datang suatu masalah yang tidak terpikirkan olehku.Tapi aku sadar, masalah ini datang untuk membuatku dewasa. 
+                            Lalu datang suatu masalah yang tidak terpikirkan olehku. 
+                            Tapi aku sadar, masalah ini datang untuk membuatku dewasa. 
                             Secara tiba-tiba, aku dipertemukan dengan seorang yang selalu aku kagumi dari dulu.
                             Memang kita sudah berpisah, tetapi perasaanku tidak pernah berubah. 
                             Ternyata dia sedang menjalani hubungan dengan orang yang aku kenal, temanku sendiri. 
@@ -294,7 +300,7 @@
                             Lagi dan lagi orang aku kagumi datang, untuk mengobati temanku. 
                             Temanku tidak bisa membawa kendaraannya, ia menyuruhku untuk mengantarkan orang yang ku kagumi pulang. 
                             Aneh rasanya, tak karuan. Banyak obrolan yang tercurahkan antara aku dan dia.
-                            </p>
+                        </p>
                         <p>Singkat cerita orang yang ku kagumi berpisah dengan temanku. 
                             Aku bingung, karena interaksi kami semakin intens. 
                             Tapi aku malah mempunyai beban moral kepada temanku. 
@@ -308,6 +314,7 @@
                     </section>
                 </article>`
             },
+
 
             { id: 'my-shapes',
                 title: '4. My Shapes',
@@ -340,6 +347,8 @@
                             Dari situ, aku tergerak untuk lebih berguna dalam dunia teknologi dan membantu sisi psikologi seseorang. 
                             Dari mulai mengikuti lomba pemmbuatan aplikasi untuk kemasyarakatan (administrasi kenegaraan semua dalam satu aplikasi), menjadi mentor untuk adik kelas yang membutuhkan ilmu untuk berlomba (pengajar OSN Informatika dan Berpikir Komputasional). 
                             Selain itu dari hobiku di bidang dokumentasi, aku suka menyunting foto dan video untuk membuat orang orang senang bahwa momen mereka didokumentasikan.</p>
+
+
                         <h3 style="color:var(--accent);margin-top:28px;">3. A – Aptitudes & Acquired Skills (Bakat & Keterampilan)</h3>
                         <p>Untuk sisi bakat alami, aku suka semua hal tentang berhitung sedari kecil. 
                             Lalu berkembang menjadi aku yang selalu berpikir terstruktur dalam memecahkan suatu masalah. 
@@ -359,7 +368,8 @@
 
 
                         <h3 style="color:var(--accent);margin-top:28px;">E – Experiences (Pengalaman Hidup)</h3>
-                        <p>Aku tumbuh dengan pengalaman diberbagai kegiatan. Aku rajin mengikuti lomba sejak SD dari mulai kompetisi berhitung, storytelling menggunakan bahasa inggris, sampai olimpiade Infomatika dan Matematika. 
+                        <p>Aku tumbuh dengan pengalaman diberbagai kegiatan. 
+                            Aku rajin mengikuti lomba sejak SD dari mulai kompetisi berhitung, storytelling menggunakan bahasa inggris, sampai olimpiade Infomatika dan Matematika. 
                             Selain perlombaan aku mengikuti berbagai kegiatan kepanitiaan dan organisasi. 
                             Dimulai sejak SMP, aku mengikuti komunitas matematika di sekolahku. 
                             Saat SMA aku mengikuti Organisasi Siswa Intra Sekolah dibidang pendidikan dan hubungan masyarakat, dan Computer Club sebagai pengurus inti dan mentor untuk perlombaan. 
@@ -383,7 +393,7 @@
                                         <th>Komponen</th>
                                         <th>Deskripsi Reflektif</th>
                                         <th>Contoh Implementasi Nyata</th>
-                                   </tr>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
@@ -409,8 +419,6 @@
                                     <tr>
                                         <th>E – Experiences<br><small>(Pengalaman Hidup)</small></th>
                                         <td>Selalu menemukan masalah ditengah, demotivasi, tetapi selalu mencari jalan lain untuk menanggulanginya, entah itu di bagian perlombaan, kepanitiaan ataupun organisasi.</td>
-
-
                                         <td>Menjadi best staff divisi dokumentasi Wisuda Oktober ITB 2024. Menjadi ketua BPA divisi Dokumentasi STEI-K 24.</td>
                                     </tr>
                                     <tr>
@@ -425,20 +433,34 @@
                 </article>`
             },
 
-            {
-                id: 'personal-reviews',
-                title: '5. My Personal Reviews',
-                content: `<article style="text-align:center;">
-                    <h2 style="color:var(--brand);">Penilaian Diri (UTS-5)</h2>
-                    <a href="https://docs.google.com/spreadsheets/d/1vcRkG518f2JhgGZ8X6KQPsz-SiRMErF1qsvWjkkyBtw/edit?usp=sharing" target="_blank" class="file-card">
-                        <span style="font-size:30px;">📊</span>
-                        <div style="text-align:left;">
-                            <p style="margin:0; font-weight:600;">UTS-5_Skor Menilai_18224041.xlsx</p>
-                            <p style="margin:0; font-size:12px; color:var(--muted);">Author: Irghi Satya Priangga [cite: 101]</p>
-                        </div>
-                    </a>
-                </article>`
+
+            { id: 'personal-reviews', title: '5. My Personal Reviews', content: 
+                `
+                <article>
+                    <section style="max-width:800px;margin:auto;line-height:1.7;text-align:center;">
+                        <h2 style="color:var(--brand);margin-bottom:20px;">Dokumen Penilaian Diri (UTS-5)</h2>
+                        <p style="color:var(--muted);margin-bottom:30px;">
+                            Dokumen ini berisi hasil penilaian diri terhadap portofolio yang telah dibuat.
+                        </p>
+
+
+                        <a href="https://docs.google.com/spreadsheets/d/1vcRkG518f2JhgGZ8X6KQPsz-SiRMErF1qsvWjkkyBtw/edit?usp=sharing" target="_blank" class="file-card">
+                            <span class="icon" style="font-size: 30px; color: #217346;">📊</span>
+                            <div class="info">
+                                <p class="name">UTS-5_Skor Menilai_18224041.xlsx</p>
+                                <p class="author">Author: Irghi Satya Priangga</p>
+                            </div>
+                        </a>
+                        
+                        <p style="font-size:14px; color:var(--muted); margin-top: 10px; text-align: center;">
+                            <small>File Excel Penilaian Diri dapat diakses melalui tautan di atas.</small>
+                        </p>
+                        
+                    </section>
+                </article>
+                `
             },
+            
             // BAGIAN 6-12 YANG TIDAK BOLEH HILANG 
             { id: 'my-concepts', title: '6. My Concepts', content: placeholder('My Concepts') },
             { id: 'my-opinions', title: '7. My Opinions', content: placeholder('My Opinions') },
